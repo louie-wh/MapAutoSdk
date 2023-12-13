@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_762"
+        android:layout_height="match_parent"
+        android:background="@drawable/more_bg"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_24">
+
+        <ImageView
+            android:id="@+id/modify_license_plate_number_img_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp_34"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:src="@mipmap/ic_back_white"/>
+
+        <RelativeLayout
+            android:id="@+id/modify_license_plate_number_rl_place_of_ownership"
+            android:layout_width="@dimen/dp_120"
+            android:layout_height="@dimen/dp_72"
+            android:layout_marginLeft="@dimen/dp_64"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/modify_license_plate_number_popup_bg">
+
+            <ImageView
+                android:layout_width="@dimen/dp_32"
+                android:layout_height="@dimen/dp_32"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:src="@mipmap/ic_unfold" />
+
+            <TextView
+                android:id="@+id/modify_license_plate_number_tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/dp_28"
+                android:text="京"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_28" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_378"
+            android:layout_height="@dimen/dp_72"
+            android:layout_toRightOf="@id/modify_license_plate_number_rl_place_of_ownership"
+            android:layout_marginTop="@dimen/dp_20"
+            android:background="@drawable/modify_license_plate_number_popup_et_bg">
+
+            <EditText
+                android:id="@+id/modify_license_plate_number_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toLeftOf="@id/modify_license_plate_number_img_delete"
+                android:background="@drawable/modify_license_plate_number_popup_et_bg"
+                android:hint="输入车牌号码"
+                android:maxLength="5"
+                android:paddingLeft="@dimen/dp_16"
+                android:textColor="#505773"
+                android:textColorHint="#505773"
+                android:textSize="@dimen/sp_28"
+                android:imeOptions="flagNoExtractUi"/>
+
+            <ImageView
+                android:id="@+id/modify_license_plate_number_img_delete"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:src="@mipmap/ic_delete_white"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_20"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/modify_license_plate_number_tv_ok"
+            android:layout_width="@dimen/dp_172"
+            android:layout_height="@dimen/dp_84"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_marginRight="@dimen/dp_18"
+            android:background="@mipmap/ic_btn_complete_n_white"
+            android:gravity="center"
+            android:text="完成"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_28" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="输入车牌号码后，百度地图为您避开城市限行路线"
+            android:textSize="@dimen/sp_22"
+            android:textColor="#505773"
+            android:layout_marginTop="@dimen/dp_112"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

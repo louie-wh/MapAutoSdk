@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/item_recommended_route_rl_scheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_56"
+        android:background="@drawable/recommended_route_list_two_bg">
+
+        <TextView
+            android:id="@+id/item_recommended_route_tv_scheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="推荐方案"
+            android:textSize="@dimen/sp_22"
+            android:textColor="@color/recommended_route_item_text_selector"
+            android:background="@drawable/recommended_route_list_one_bg"
+            android:padding="@dimen/dp_5"/>
+
+        <TextView
+            android:id="@+id/item_recommended_route_tv_scheme_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="常规路线·宽阔优质路线，大家常选"
+            android:textSize="@dimen/sp_22"
+            android:textColor="@color/recommended_route_item_text_selector"
+            android:paddingTop="@dimen/dp_5"
+            android:paddingBottom="@dimen/dp_5"
+            android:paddingLeft="@dimen/dp_10"
+            android:paddingRight="@dimen/dp_25"
+            android:layout_toRightOf="@id/item_recommended_route_tv_scheme"
+            android:layout_marginLeft="@dimen/dp_3"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/item_recommended_route_tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="42分钟"
+        android:textSize="@dimen/sp_32"
+        android:textColor="@color/recommended_route_item_time_selector"
+        android:layout_below="@id/item_recommended_route_rl_scheme"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_60"/>
+
+    <TextView
+        android:id="@+id/item_recommended_route_tv_distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="22公里"
+        android:textSize="@dimen/sp_32"
+        android:textColor="@color/recommended_route_item_time_selector"
+        android:layout_below="@id/item_recommended_route_rl_scheme"
+        android:layout_toRightOf="@id/item_recommended_route_tv_time"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginLeft="@dimen/dp_30"/>
+
+    <ImageView
+        android:id="@+id/item_recommended_route_img"
+        android:layout_width="@dimen/dp_18"
+        android:layout_height="@dimen/dp_20"
+        android:src="@mipmap/ic_traffic_lights_s"
+        android:layout_below="@id/item_recommended_route_tv_time"
+        android:layout_marginTop="@dimen/dp_13"
+        android:layout_marginLeft="@dimen/dp_60"/>
+
+    <TextView
+        android:id="@+id/item_recommended_route_traffic_lights_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:textSize="@dimen/sp_22"
+        android:textColor="@color/recommended_route_item_text_selector"
+        android:layout_below="@id/item_recommended_route_tv_time"
+        android:layout_toRightOf="@id/item_recommended_route_img"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_marginLeft="@dimen/dp_8"/>
+
+    <TextView
+        android:id="@+id/item_recommended_route_totalPrices"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="18"
+        android:textSize="@dimen/sp_22"
+        android:textColor="@color/recommended_route_item_text_selector"
+        android:layout_below="@id/item_recommended_route_tv_time"
+        android:layout_toRightOf="@id/item_recommended_route_traffic_lights_num"
+        android:layout_marginTop="@dimen/dp_7"
+        android:layout_marginLeft="@dimen/dp_28"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="#E9EAF0"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_below="@id/item_recommended_route_img"
+        android:layout_marginTop="@dimen/dp_17"/>
+
+    <ImageView
+        android:id="@+id/item_recommended_route_img_simulation_navi"
+        android:layout_width="44dp"
+        android:layout_height="@dimen/dp_44"
+        android:src="@mipmap/icon_simulation"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="@dimen/dp_56"/>
+
+</RelativeLayout>

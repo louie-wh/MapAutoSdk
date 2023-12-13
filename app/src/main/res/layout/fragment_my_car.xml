@@ -1,0 +1,1372 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_762"
+        android:layout_height="match_parent"
+        android:background="@drawable/more_bg"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24">
+
+        <ImageView
+            android:id="@+id/my_car_popup_img_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp_34"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:src="@mipmap/ic_back_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的爱车"
+            android:textSize="@dimen/sp_32"
+            android:textColor="#11131A"
+            android:layout_marginTop="@dimen/dp_36"
+            android:layout_centerHorizontal="true"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/dp_34"
+            android:layout_marginTop="@dimen/dp_97"
+            android:overScrollMode="never"
+            android:scrollbars="none">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="@dimen/dp_98">
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_essential_information"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_68"
+                    android:background="#F2F4F7"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/dp_40"
+                    android:text="基本信息"
+                    android:textColor="#505773"
+                    android:textSize="@dimen/sp_24"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_tv_essential_information"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:text="车牌号"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_below="@id/my_car_popup_tv_essential_information"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginLeft="@dimen/dp_123"
+                    android:text="*"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#F76454"
+                    android:gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/my_car_popup_rl_place_of_ownership"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_48"
+                    android:layout_below="@id/my_car_popup_tv_essential_information"
+                    android:layout_marginLeft="@dimen/dp_208"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:background="@drawable/my_car_popup_bg">
+
+                    <ImageView
+                        android:layout_width="@dimen/dp_32"
+                        android:layout_height="@dimen/dp_32"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/dp_12"
+                        android:src="@mipmap/ic_unfold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/dp_20"
+                        android:text="京"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_28"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_car_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请输入车牌号码"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_tv_essential_information"
+                    android:layout_toRightOf="@id/my_car_popup_rl_place_of_ownership"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginLeft="@dimen/dp_20"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/my_car_popup_rl_place_of_ownership"
+                    android:background="#E9EBF0"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_208"
+                    android:layout_marginRight="@dimen/dp_36"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="避开限行"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#11131A"
+                    android:layout_below="@id/my_car_popup_rl_place_of_ownership"
+                    android:layout_marginTop="@dimen/dp_78"
+                    android:layout_marginLeft="@dimen/dp_40"/>
+
+                <ImageView
+                    android:id="@+id/my_car_popup_img_switch"
+                    android:layout_width="@dimen/dp_90"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_below="@id/my_car_popup_rl_place_of_ownership"
+                    android:layout_marginLeft="@dimen/dp_207"
+                    android:layout_marginTop="@dimen/dp_73"
+                    android:src="@mipmap/ic_switch_close_white" />
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_power_type"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_img_switch"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:text="动力类型"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/sp_28" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="选择后将首推您车型的加油/充电方式"
+                    android:textSize="@dimen/sp_20"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_img_switch"
+                    android:layout_marginTop="@dimen/dp_50"
+                    android:layout_marginLeft="@dimen/dp_162"/>
+
+                <com.baidu.mapautosdk.view.FlowRadioGroup
+                    android:id="@+id/my_car_popup_rg_power_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_tv_power_type"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_28"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_fuel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="燃油车"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_electric"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_40"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="纯电动"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_oil_electric_mixing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_40"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="油电混合动力"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_diesel_oil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_40"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="柴油"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_plug_in"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_36"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="插电式混合动力"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_adder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_40"
+                        android:layout_marginTop="@dimen/dp_36"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="增程式动力"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                </com.baidu.mapautosdk.view.FlowRadioGroup>
+
+                <RelativeLayout
+                    android:id="@+id/my_car_popup_rl_parameter"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_68"
+                    android:background="#F2F4F7"
+                    android:layout_below="@id/my_car_popup_rg_power_type"
+                    android:layout_marginTop="@dimen/dp_40">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="货车参数"
+                        android:textSize="@dimen/sp_24"
+                        android:textColor="#505773"
+                        android:layout_marginLeft="@dimen/dp_40"
+                        android:layout_centerVertical="true"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(详细填写，精确到小数点后两位，帮您精准避免违章和绕路）"
+                        android:textSize="@dimen/sp_20"
+                        android:textColor="#505773"
+                        android:layout_marginLeft="@dimen/dp_143"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rl_parameter"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:text="货车类型"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_below="@id/my_car_popup_rl_parameter"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:layout_marginLeft="@dimen/dp_152"
+                    android:text="*"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#F76454"
+                    android:gravity="center_vertical"/>
+
+                <com.baidu.mapautosdk.view.FlowRadioGroup
+                    android:id="@+id/my_car_popup_rg_truck_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rl_parameter"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_92"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rg_miniature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="微型货车"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rg_light"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_28"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="轻型货车"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rg_midsize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_28"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="中型货车"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rg_heavy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_28"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="重型货车"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rg_trailer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_36"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="挂车"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rg_special_purpose"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_36"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="专用货车"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rg_cross_country"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_36"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="越野货车"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                </com.baidu.mapautosdk.view.FlowRadioGroup>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rg_truck_type"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:text="总重量"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_weight_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_below="@id/my_car_popup_rg_truck_type"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:layout_marginLeft="@dimen/dp_124"
+                    android:text="*"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#F76454"
+                    android:gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/my_car_popup_rl_weight"
+                    android:layout_width="@dimen/dp_328"
+                    android:layout_height="@dimen/dp_56"
+                    android:background="@drawable/my_car_popup_weight_bg"
+                    android:layout_below="@id/my_car_popup_rg_truck_type"
+                    android:layout_toRightOf="@id/my_car_popup_tv_weight_stars"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_60">
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_weight_decrease"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_decrease_n_white"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_toRightOf="@id/my_car_popup_img_weight_decrease"
+                        android:layout_marginLeft="@dimen/dp_6"/>
+
+                    <TextView
+                        android:id="@+id/my_car_popup_tv_weight"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="@dimen/sp_28"
+                        android:textColor="#11131A"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_56"/>
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_weight_add"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_increase_n_white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吨"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_rg_truck_type"
+                    android:layout_toRightOf="@id/my_car_popup_rl_weight"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:layout_marginLeft="@dimen/dp_12"/>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_weight_example"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看示例"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#3366FF"
+                    android:layout_below="@id/my_car_popup_rg_truck_type"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_52"
+                    android:layout_marginRight="@dimen/dp_38"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rl_weight"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:text="核定载量"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_verification_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_below="@id/my_car_popup_rl_weight"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:layout_marginLeft="@dimen/dp_152"
+                    android:text="*"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#F76454"
+                    android:gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/my_car_popup_rl_verification"
+                    android:layout_width="@dimen/dp_328"
+                    android:layout_height="@dimen/dp_56"
+                    android:background="@drawable/my_car_popup_weight_bg"
+                    android:layout_below="@id/my_car_popup_rl_weight"
+                    android:layout_toRightOf="@id/my_car_popup_tv_verification_stars"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_32">
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_verification_decrease"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_decrease_n_white"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_toRightOf="@id/my_car_popup_img_verification_decrease"
+                        android:layout_marginLeft="@dimen/dp_6"/>
+
+                    <TextView
+                        android:id="@+id/my_car_popup_tv_verification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="@dimen/sp_28"
+                        android:textColor="#11131A"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_56"/>
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_verification_add"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_increase_n_white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吨"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_rl_weight"
+                    android:layout_toRightOf="@id/my_car_popup_rl_verification"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:layout_marginLeft="@dimen/dp_12"/>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_verification_example"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="查看示例"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#3366FF"
+                    android:layout_below="@id/my_car_popup_rl_weight"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_52"
+                    android:layout_marginRight="@dimen/dp_38"/>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_weight_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*核定载重应小于总重量，请调整"
+                    android:textSize="@dimen/sp_20"
+                    android:textColor="#F76454"
+                    android:layout_below="@id/my_car_popup_rl_verification"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginLeft="@dimen/dp_199"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rl_verification"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_84"
+                    android:text="车长"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_car_length_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_below="@id/my_car_popup_rl_verification"
+                    android:layout_marginTop="@dimen/dp_84"
+                    android:layout_marginLeft="@dimen/dp_96"
+                    android:text="*"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#F76454"
+                    android:gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/my_car_popup_rl_car_length"
+                    android:layout_width="@dimen/dp_328"
+                    android:layout_height="@dimen/dp_56"
+                    android:background="@drawable/my_car_popup_weight_bg"
+                    android:layout_below="@id/my_car_popup_rl_verification"
+                    android:layout_toRightOf="@id/my_car_popup_tv_car_length_stars"
+                    android:layout_marginTop="@dimen/dp_76"
+                    android:layout_marginLeft="@dimen/dp_88">
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_car_length_decrease"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_decrease_n_white"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_toRightOf="@id/my_car_popup_img_car_length_decrease"
+                        android:layout_marginLeft="@dimen/dp_6"/>
+
+                    <TextView
+                        android:id="@+id/my_car_popup_tv_car_length"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="@dimen/sp_28"
+                        android:textColor="#11131A"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_56"/>
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_car_length_add"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_increase_n_white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="米"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_rl_verification"
+                    android:layout_toRightOf="@id/my_car_popup_rl_car_length"
+                    android:layout_marginTop="@dimen/dp_84"
+                    android:layout_marginLeft="@dimen/dp_12"/>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_car_length_avoid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="避开小路"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_rl_verification"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_88"
+                    android:layout_marginRight="@dimen/dp_38"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rl_car_length"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:text="车宽"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_car_width_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_below="@id/my_car_popup_rl_car_length"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:layout_marginLeft="@dimen/dp_96"
+                    android:text="*"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#F76454"
+                    android:gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/my_car_popup_rl_car_width"
+                    android:layout_width="@dimen/dp_328"
+                    android:layout_height="@dimen/dp_56"
+                    android:background="@drawable/my_car_popup_weight_bg"
+                    android:layout_below="@id/my_car_popup_rl_car_length"
+                    android:layout_toRightOf="@id/my_car_popup_tv_car_width_stars"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_88">
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_car_width_decrease"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_decrease_n_white"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_toRightOf="@id/my_car_popup_img_car_width_decrease"
+                        android:layout_marginLeft="@dimen/dp_6"/>
+
+                    <TextView
+                        android:id="@+id/my_car_popup_tv_car_width"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="@dimen/sp_28"
+                        android:textColor="#11131A"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_56"/>
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_car_width_add"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_increase_n_white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="米"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_rl_car_length"
+                    android:layout_toRightOf="@id/my_car_popup_rl_car_width"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:layout_marginLeft="@dimen/dp_12"/>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_car_width_avoid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="避开限宽"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_rl_car_length"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_52"
+                    android:layout_marginRight="@dimen/dp_38"/>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_width_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*车宽超过法规限定，可能会引起严重绕行"
+                    android:textSize="@dimen/sp_20"
+                    android:textColor="#F76454"
+                    android:layout_below="@id/my_car_popup_rl_car_width"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginLeft="@dimen/dp_199"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rl_car_width"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_84"
+                    android:text="车高"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_car_height_stars"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_below="@id/my_car_popup_rl_car_width"
+                    android:layout_marginTop="@dimen/dp_84"
+                    android:layout_marginLeft="@dimen/dp_96"
+                    android:text="*"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#F76454"
+                    android:gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/my_car_popup_rl_car_height"
+                    android:layout_width="@dimen/dp_328"
+                    android:layout_height="@dimen/dp_56"
+                    android:background="@drawable/my_car_popup_weight_bg"
+                    android:layout_below="@id/my_car_popup_rl_car_width"
+                    android:layout_toRightOf="@id/my_car_popup_tv_car_height_stars"
+                    android:layout_marginTop="@dimen/dp_76"
+                    android:layout_marginLeft="@dimen/dp_88">
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_car_height_decrease"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_decrease_n_white"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_toRightOf="@id/my_car_popup_img_car_height_decrease"
+                        android:layout_marginLeft="@dimen/dp_6"/>
+
+                    <TextView
+                        android:id="@+id/my_car_popup_tv_car_height"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textSize="@dimen/sp_28"
+                        android:textColor="#11131A"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_56"/>
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_car_height_add"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_increase_n_white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="米"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_rl_car_width"
+                    android:layout_toRightOf="@id/my_car_popup_rl_car_height"
+                    android:layout_marginTop="@dimen/dp_84"
+                    android:layout_marginLeft="@dimen/dp_12"/>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_car_height_avoid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="避开限高"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_rl_car_width"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/dp_88"
+                    android:layout_marginRight="@dimen/dp_38"/>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_height_tips"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="*车高超过法规限定，可能会引起严重绕行"
+                    android:textSize="@dimen/sp_20"
+                    android:textColor="#F76454"
+                    android:layout_below="@id/my_car_popup_rl_car_height"
+                    android:layout_marginTop="@dimen/dp_8"
+                    android:layout_marginLeft="@dimen/dp_199"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_axes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rl_car_height"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_76"
+                    android:text="轴数"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_below="@id/my_car_popup_rl_car_height"
+                    android:layout_marginTop="@dimen/dp_76"
+                    android:layout_marginLeft="@dimen/dp_96"
+                    android:text="*"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#F76454"
+                    android:gravity="center_vertical"/>
+
+                <com.baidu.mapautosdk.view.FlowRadioGroup
+                    android:id="@+id/my_car_popup_rg_axes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_tv_axes"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_33"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_axes_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="2轴"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_axes_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_66"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="3轴"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_axes_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_66"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="4轴"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_axes_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_66"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="5轴"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_axes_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_66"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="6轴"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_axes_six_above"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_41"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="6轴以上"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                </com.baidu.mapautosdk.view.FlowRadioGroup>
+
+                <View
+                    android:id="@+id/my_car_popup_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_8"
+                    android:background="#F5F6FA"
+                    android:layout_below="@id/my_car_popup_rg_axes"
+                    android:layout_marginTop="@dimen/dp_40"/>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_discharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_view"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:text="排放标准"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <com.baidu.mapautosdk.view.FlowRadioGroup
+                    android:id="@+id/my_car_popup_rg_discharge"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_tv_discharge"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_33"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_discharge_one"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="国1"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_discharge_two"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_71"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="国2"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_discharge_three"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_71"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="国3"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_discharge_four"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_71"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="国4"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_discharge_five"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_71"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="国5"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28"/>
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_discharge_six"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_46"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="国6"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28"/>
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_discharge_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_46"
+                        android:layout_marginLeft="@dimen/dp_71"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="无"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28"/>
+
+                </com.baidu.mapautosdk.view.FlowRadioGroup>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_license_plate_color"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rg_discharge"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:text="车牌颜色"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <com.baidu.mapautosdk.view.FlowRadioGroup
+                    android:id="@+id/my_car_popup_rg_license_plate_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_tv_license_plate_color"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_33"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_license_plate_color_yellow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="黄牌"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_license_plate_color_blue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_55"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="蓝牌"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_license_plate_color_green"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_55"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="绿牌"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_license_plate_color_black"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_55"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="黑牌"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_license_plate_color_white"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_55"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="白牌"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28"/>
+
+                </com.baidu.mapautosdk.view.FlowRadioGroup>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_purpose"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rg_license_plate_color"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:text="货车用途"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28"/>
+
+                <com.baidu.mapautosdk.view.FlowRadioGroup
+                    android:id="@+id/my_car_popup_rg_purpose"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_tv_purpose"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_33"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_purpose_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:button="@null"
+                        android:checked="true"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="暂不选择"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                    <RadioButton
+                        android:id="@+id/my_car_popup_rb_purpose_dangerous_vehicles"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_80"
+                        android:button="@null"
+                        android:checked="false"
+                        android:drawableLeft="@drawable/radiobutton_bg"
+                        android:drawablePadding="@dimen/dp_8"
+                        android:text="危化车辆"
+                        android:textColor="#505773"
+                        android:textSize="@dimen/sp_28" />
+
+                </com.baidu.mapautosdk.view.FlowRadioGroup>
+
+                <TextView
+                    android:id="@+id/my_car_popup_tv_oil_consumption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/my_car_popup_rg_purpose"
+                    android:layout_marginLeft="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:text="百公里油耗"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/dp_28" />
+
+                <RelativeLayout
+                    android:id="@+id/my_car_popup_rl_oil_consumption"
+                    android:layout_width="@dimen/dp_328"
+                    android:layout_height="@dimen/dp_56"
+                    android:background="@drawable/my_car_popup_weight_bg"
+                    android:layout_below="@id/my_car_popup_rg_purpose"
+                    android:layout_toRightOf="@id/my_car_popup_tv_oil_consumption"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_marginLeft="@dimen/dp_19">
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_oil_consumption_decrease"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_decrease_n_white"
+                        android:layout_marginLeft="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_toRightOf="@id/my_car_popup_img_oil_consumption_decrease"
+                        android:layout_marginLeft="@dimen/dp_6"/>
+
+                    <TextView
+                        android:id="@+id/my_car_popup_tv_oil_consumption_l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="输入0.0"
+                        android:textSize="@dimen/sp_28"
+                        android:textColor="#11131A"
+                        android:layout_centerInParent="true"/>
+
+                    <View
+                        android:layout_width="@dimen/dp_2"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_56"/>
+
+                    <ImageView
+                        android:id="@+id/my_car_popup_img_oil_consumption_add"
+                        android:layout_width="@dimen/dp_44"
+                        android:layout_height="@dimen/dp_44"
+                        android:src="@mipmap/ic_increase_n_white"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/dp_6"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="L（0-150）"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#505773"
+                    android:layout_below="@id/my_car_popup_rg_purpose"
+                    android:layout_toRightOf="@id/my_car_popup_rl_oil_consumption"
+                    android:layout_marginTop="@dimen/dp_48"
+                    android:layout_marginLeft="@dimen/dp_18"/>
+
+            </RelativeLayout>
+
+        </ScrollView>
+
+    </RelativeLayout>
+
+</RelativeLayout>

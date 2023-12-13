@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:paddingBottom="@dimen/dp_33"
+    tools:context=".ui.fragment.setting.RouteFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/navigation_rl_perspective"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_168"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="导航视角"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#11131A"
+                android:layout_marginTop="@dimen/dp_28"/>
+
+            <LinearLayout
+                android:id="@+id/navigation_ll_perspective"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_88"
+                android:background="@drawable/more_popup_broadcast_bg">
+
+                <TextView
+                    android:id="@+id/navigation_tv_perspective_headstock"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="跟随车头"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/not_downloaded_city_bg"/>
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"/>
+
+                <TextView
+                    android:id="@+id/navigation_tv_perspective_north_up"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="正北朝上"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#11131A"
+                    android:gravity="center"
+                    android:background="@drawable/more_popup_broadcast_bg"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#E9EAF0"
+                android:layout_below="@id/navigation_ll_perspective"
+                android:layout_marginTop="@dimen/dp_24"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/navigation_rl_day_and_night"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_171"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_below="@id/navigation_rl_perspective">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日夜模式"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#11131A"
+                android:layout_marginTop="@dimen/dp_28"/>
+
+            <LinearLayout
+                android:id="@+id/navigation_ll_day_and_night"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_88"
+                android:background="@drawable/more_popup_broadcast_bg">
+
+                <TextView
+                    android:id="@+id/navigation_tv_day_and_night_automatic"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="自动"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/not_downloaded_city_bg"/>
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"/>
+
+                <TextView
+                    android:id="@+id/navigation_tv_day_and_night_day"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="白天"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#11131A"
+                    android:gravity="center"
+                    android:background="@drawable/more_popup_broadcast_bg"/>
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"/>
+
+                <TextView
+                    android:id="@+id/navigation_tv_day_and_night_night"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="黑夜"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#11131A"
+                    android:gravity="center"
+                    android:background="@drawable/more_popup_broadcast_bg"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#E9EAF0"
+                android:layout_below="@id/navigation_ll_day_and_night"
+                android:layout_marginTop="@dimen/dp_24"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/navigation_rl_road_condition"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_279"
+            android:layout_below="@id/navigation_rl_day_and_night"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_28"
+                android:text="导航中路况概括"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_88">
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent">
+                    <ImageView
+                        android:id="@+id/navigation_img_map"
+                        android:layout_width="@dimen/dp_250"
+                        android:layout_height="@dimen/dp_120"
+                        android:src="@drawable/nsdk_map_switch_checked"
+                        android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="全览小窗"
+                        android:textSize="@dimen/sp_24"
+                        android:textColor="#11131A"
+                        android:layout_below="@id/navigation_img_map"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_12"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="@dimen/dp_22">
+                    <ImageView
+                        android:id="@+id/navigation_img_road"
+                        android:layout_width="@dimen/dp_250"
+                        android:layout_height="@dimen/dp_120"
+                        android:src="@drawable/nsdk_road_condition_normal"
+                        android:layout_centerHorizontal="true"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="路况条"
+                        android:textSize="@dimen/sp_24"
+                        android:textColor="#11131A"
+                        android:layout_below="@id/navigation_img_road"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_12"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="#E9EAF0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/navigation_rl_zoom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_121"
+            android:layout_below="@id/navigation_rl_road_condition"
+            android:layout_marginLeft="@dimen/dp_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_28"
+                android:text="导航比例尺智能缩放"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_72"
+                android:text="导航中地图自动放大或缩小"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_22" />
+
+            <ImageView
+                android:id="@+id/navigation_img_zoom"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_23"
+                android:src="@mipmap/ic_switch_close_white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="#E9EAF0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/navigation_rl_enlarge"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_121"
+            android:layout_below="@id/navigation_rl_zoom"
+            android:layout_marginLeft="@dimen/dp_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_28"
+                android:text="显示路口放大图"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_72"
+                android:text="未下载离线导航包,会使用流量数据"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_22" />
+
+            <ImageView
+                android:id="@+id/navigation_img_enlarge"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_23"
+                android:src="@mipmap/ic_switch_close_white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="#E9EAF0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/navigation_rl_connection"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_121"
+            android:layout_below="@id/navigation_rl_enlarge"
+            android:layout_marginLeft="@dimen/dp_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_28"
+                android:text="显示车标到终点红色连线"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_72"
+                android:text="红线连接点并指向终点方向"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_22" />
+
+            <ImageView
+                android:id="@+id/navigation_img_connection"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_23"
+                android:src="@mipmap/ic_switch_close_white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

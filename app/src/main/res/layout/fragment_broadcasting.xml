@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:paddingBottom="@dimen/dp_33"
+    tools:context=".ui.fragment.setting.RouteFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/broadcasting_rl_one"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_97"
+            android:layout_marginLeft="@dimen/dp_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线算路优先"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#11131A"
+                android:layout_marginTop="@dimen/dp_29"/>
+
+            <ImageView
+                android:id="@+id/broadcasting_img_online_route_calculation"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_50"
+                android:src="@mipmap/ic_switch_close_white"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_23"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#E9EAF0"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/broadcasting_rl_two"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_171"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_below="@id/broadcasting_rl_one">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="导航语音"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#11131A"
+                android:layout_marginTop="@dimen/dp_28"/>
+
+            <LinearLayout
+                android:id="@+id/broadcasting_ll_voice"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_88"
+                android:background="@drawable/more_popup_broadcast_bg">
+
+                <TextView
+                    android:id="@+id/broadcasting_tv_broadcasting"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="导航播报"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/not_downloaded_city_bg"/>
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"/>
+
+                <TextView
+                    android:id="@+id/broadcasting_tv_mute"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="导航静音"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#11131A"
+                    android:gravity="center"
+                    android:background="@drawable/more_popup_broadcast_bg"/>
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="@color/white"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"/>
+
+                <TextView
+                    android:id="@+id/broadcasting_tv_tips"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="仅提示音"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#11131A"
+                    android:gravity="center"
+                    android:background="@drawable/more_popup_broadcast_bg"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#E9EAF0"
+                android:layout_below="@id/broadcasting_ll_voice"
+                android:layout_marginTop="@dimen/dp_24"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/broadcasting_rl_three"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_207"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_below="@id/broadcasting_rl_two">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="播报内容"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#11131A"
+                android:layout_marginTop="@dimen/dp_28"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_88"
+                android:background="@drawable/more_popup_broadcast_bg">
+
+                <TextView
+                    android:id="@+id/broadcasting_tv_standard"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="标准播报"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:background="@drawable/not_downloaded_city_bg"/>
+
+                <TextView
+                    android:id="@+id/broadcasting_tv_concise"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:text="简洁播报"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#11131A"
+                    android:gravity="center"
+                    android:background="@drawable/more_popup_broadcast_bg"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/broadcasting_tv_content_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_24"
+                android:text="标准播报：默认模式，适合多数人使用"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_20"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#E9EAF0"
+                android:layout_alignParentBottom="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/broadcasting_rl_four"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_207"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_below="@id/broadcasting_rl_three">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="导航音量"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#11131A"
+                android:layout_marginTop="@dimen/dp_28"/>
+
+            <ImageView
+                android:id="@+id/broadcasting_img_volume"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:src="@mipmap/ic_low_volume_n_white"
+                android:layout_marginTop="@dimen/dp_94"/>
+
+            <ImageView
+                android:id="@+id/broadcasting_img_volume_reduce"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:src="@mipmap/ic_decrease_n_white"
+                android:layout_marginTop="@dimen/dp_94"
+                android:layout_toRightOf="@id/broadcasting_img_volume"
+                android:layout_marginLeft="@dimen/dp_28"/>
+
+            <ProgressBar
+                android:id="@+id/broadcasting_pb_volume"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="@dimen/dp_330"
+                android:layout_height="@dimen/dp_56"
+                android:max="100"
+                android:progressDrawable="@drawable/more_progressbar_bg"
+                android:layout_marginTop="@dimen/dp_88"
+                android:layout_toRightOf="@id/broadcasting_img_volume_reduce"
+                android:layout_marginLeft="@dimen/dp_16"/>
+
+            <ImageView
+                android:id="@+id/broadcasting_img_volume_add"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:src="@mipmap/ic_increase_n_white"
+                android:layout_toRightOf="@id/broadcasting_pb_volume"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_94"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

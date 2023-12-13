@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:paddingBottom="@dimen/dp_33"
+    tools:context=".ui.fragment.setting.RouteFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="路线偏好"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_marginTop="@dimen/dp_24"
+            android:layout_marginLeft="@dimen/dp_24"/>
+
+        <com.baidu.mapautosdk.view.FlowRadioGroup
+            android:id="@+id/route_rg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_92"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/route_rb_recommend"
+                android:layout_width="@dimen/dp_162"
+                android:layout_height="@dimen/dp_110"
+                android:paddingTop="@dimen/dp_20"
+                android:button="@null"
+                android:checked="true"
+                android:background="@drawable/setting_route_recommend_bg"
+                android:drawableTop="@drawable/setting_route_recommend_select"
+                android:text="智能推荐"
+                android:textColor="@color/setting_route_recommend_tv_color"
+                android:textSize="@dimen/sp_28"
+                android:gravity="center"/>
+
+            <RadioButton
+                android:id="@+id/route_rb_jam"
+                android:layout_width="@dimen/dp_162"
+                android:layout_height="@dimen/dp_110"
+                android:paddingTop="@dimen/dp_20"
+                android:button="@null"
+                android:checked="false"
+                android:background="@drawable/setting_route_recommend_bg"
+                android:drawableTop="@drawable/setting_route_jam_select"
+                android:text="躲避拥堵"
+                android:textColor="@color/setting_route_recommend_tv_color"
+                android:textSize="@dimen/sp_28"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_18"/>
+
+            <RadioButton
+                android:id="@+id/route_rb_time"
+                android:layout_width="@dimen/dp_162"
+                android:layout_height="@dimen/dp_110"
+                android:paddingTop="@dimen/dp_20"
+                android:button="@null"
+                android:checked="false"
+                android:background="@drawable/setting_route_recommend_bg"
+                android:drawableTop="@drawable/setting_route_time_select"
+                android:text="时间优先"
+                android:textColor="@color/setting_route_recommend_tv_color"
+                android:textSize="@dimen/sp_28"
+                android:gravity="center"
+                android:layout_marginLeft="@dimen/dp_18"/>
+
+            <RadioButton
+                android:id="@+id/route_rb_less"
+                android:layout_width="@dimen/dp_162"
+                android:layout_height="@dimen/dp_110"
+                android:paddingTop="@dimen/dp_20"
+                android:button="@null"
+                android:checked="false"
+                android:background="@drawable/setting_route_recommend_bg"
+                android:drawableTop="@drawable/setting_route_less_select"
+                android:text="少收费"
+                android:textColor="@color/setting_route_recommend_tv_color"
+                android:textSize="@dimen/sp_28"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_20"/>
+
+            <RadioButton
+                android:id="@+id/route_rb_no_highway"
+                android:layout_width="@dimen/dp_162"
+                android:layout_height="@dimen/dp_110"
+                android:paddingTop="@dimen/dp_20"
+                android:button="@null"
+                android:checked="false"
+                android:background="@drawable/setting_route_recommend_bg"
+                android:drawableTop="@drawable/setting_route_no_highway_select"
+                android:text="不走高速"
+                android:textColor="@color/setting_route_recommend_tv_color"
+                android:textSize="@dimen/sp_28"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_18"/>
+
+            <RadioButton
+                android:id="@+id/route_rb_highway"
+                android:layout_width="@dimen/dp_162"
+                android:layout_height="@dimen/dp_110"
+                android:paddingTop="@dimen/dp_20"
+                android:button="@null"
+                android:checked="false"
+                android:background="@drawable/setting_route_recommend_bg"
+                android:drawableTop="@drawable/setting_route_highway_select"
+                android:text="高速优先"
+                android:textColor="@color/setting_route_recommend_tv_color"
+                android:textSize="@dimen/sp_28"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginLeft="@dimen/dp_18"/>
+
+        </com.baidu.mapautosdk.view.FlowRadioGroup>
+
+        <View
+            android:id="@+id/route_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_1"
+            android:background="#E9EAF0"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24"
+            android:layout_below="@id/route_rg"
+            android:layout_marginTop="@dimen/dp_24"/>
+
+        <RelativeLayout
+            android:id="@+id/route_rl_license_plate"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_125"
+            android:layout_below="@id/route_view"
+            android:layout_marginLeft="@dimen/dp_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_28"
+                android:text="京AK267K"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_72"
+                android:text="常用车辆，已开启限行规避"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_22" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_49"
+                android:layout_marginRight="@dimen/dp_43"
+                android:text="修改车牌"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_22" />
+
+            <ImageView
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_45"
+                android:layout_marginRight="@dimen/dp_10"
+                android:src="@mipmap/ic_jump_white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="#E9EAF0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/route_rl_switch"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_125"
+            android:layout_below="@id/route_rl_license_plate"
+            android:layout_marginLeft="@dimen/dp_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_28"
+                android:text="车牌限行"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_72"
+                android:text="开启后会避开限行路线"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_22" />
+
+            <ImageView
+                android:id="@+id/route_img_switch"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_23"
+                android:src="@mipmap/ic_switch_close_white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="#E9EAF0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/route_rl_vehicle_type"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_171"
+            android:layout_below="@id/route_rl_switch"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_28"
+                android:text="车辆类型"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_60"
+                android:layout_marginTop="@dimen/dp_88"
+                android:background="@drawable/more_popup_broadcast_bg">
+
+                <TextView
+                    android:id="@+id/route_tv_passenger_car"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/not_downloaded_city_bg"
+                    android:gravity="center"
+                    android:text="小客车"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_24" />
+
+                <TextView
+                    android:id="@+id/route_tv_motorcycle"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/more_popup_broadcast_bg"
+                    android:gravity="center"
+                    android:text="货车"
+                    android:textColor="#11131A"
+                    android:textSize="@dimen/sp_24" />
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="#E9EAF0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_101"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_below="@id/route_rl_vehicle_type">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="在线算路优先"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#11131A"
+                android:layout_marginTop="@dimen/dp_29"/>
+
+            <ImageView
+                android:id="@+id/route_img_online_route_calculation"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_50"
+                android:src="@mipmap/ic_switch_close_white"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_23"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</ScrollView>

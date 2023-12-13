@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:overScrollMode="never"
+    android:scrollbars="none"
+    android:paddingBottom="@dimen/dp_33"
+    tools:context=".ui.fragment.setting.RouteFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/privacy_rl_search_records"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_152"
+            android:layout_marginLeft="@dimen/dp_24">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:text="搜索记录同步"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_72"
+                android:text="开启后，联网状态下此账号搜索记录将同步至车机端"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_22"
+                android:layout_marginRight="@dimen/dp_162"/>
+
+            <ImageView
+                android:id="@+id/route_img_search_records"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_51"
+                android:layout_marginRight="@dimen/dp_23"
+                android:src="@mipmap/ic_switch_close_white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="#E9EAF0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/privacy_rl_navigation_track"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_155"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_below="@id/privacy_rl_search_records">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:text="导航轨迹同步"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_72"
+                android:text="开启后,每次进入足迹首页，会自动为您同步本地和云 端的导航轨迹信息"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_22"
+                android:layout_marginRight="@dimen/dp_162"/>
+
+            <ImageView
+                android:id="@+id/route_img_navigation_track"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_55"
+                android:layout_marginRight="@dimen/dp_23"
+                android:src="@mipmap/ic_switch_close_white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="#E9EAF0" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/privacy_rl_local_footprint"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_155"
+            android:layout_marginLeft="@dimen/dp_24"
+            android:layout_below="@id/privacy_rl_navigation_track">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_24"
+                android:text="本地足迹记录"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_72"
+                android:text="开启后，将记录您所有导航轨迹信息，并保存至本地"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_22"
+                android:layout_marginRight="@dimen/dp_162"/>
+
+            <ImageView
+                android:id="@+id/route_img_local_footprint"
+                android:layout_width="@dimen/dp_90"
+                android:layout_height="@dimen/dp_50"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_55"
+                android:layout_marginRight="@dimen/dp_23"
+                android:src="@mipmap/ic_switch_close_white" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:layout_alignParentBottom="true"
+                android:background="#E9EAF0" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/privacy_tv_clear_footsteps"
+            android:layout_width="@dimen/dp_428"
+            android:layout_height="@dimen/dp_108"
+            android:text="清空所有足迹"
+            android:textSize="@dimen/sp_28"
+            android:textColor="@color/white"
+            android:background="@mipmap/btn_danger"
+            android:layout_below="@id/privacy_rl_local_footprint"
+            android:layout_marginTop="@dimen/dp_12"
+            android:layout_centerHorizontal="true"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="点击清空后，将为您清空本地和云端的导航轨迹信息"
+            android:textSize="@dimen/sp_20"
+            android:textColor="#505773"
+            android:layout_below="@id/privacy_rl_local_footprint"
+            android:layout_marginTop="@dimen/dp_116"
+            android:layout_centerHorizontal="true"/>
+
+    </RelativeLayout>
+
+</ScrollView>

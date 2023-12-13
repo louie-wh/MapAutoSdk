@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.SettingFragment">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_762"
+        android:layout_height="match_parent"
+        android:background="@drawable/more_bg"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_24">
+
+        <ImageView
+            android:id="@+id/setting_img_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp_34"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:src="@mipmap/ic_back_white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置"
+            android:textSize="@dimen/sp_32"
+            android:textColor="#11131A"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_36"/>
+
+        <View
+            android:id="@+id/setting_view"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_12"
+            android:background="#F5F6FA"
+            android:layout_marginTop="@dimen/dp_102"/>
+
+        <LinearLayout
+            android:id="@+id/setting_ll_tab"
+            android:layout_width="@dimen/dp_192"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/setting_view">
+
+            <LinearLayout
+                android:id="@+id/setting_ll_route"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_88"
+                android:background="#F2F4F7"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/setting_img_route"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_44"
+                    android:src="@mipmap/ic_route_s_white"/>
+                <TextView
+                    android:id="@+id/setting_tv_route"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="路线"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#3366FF"
+                    android:layout_marginLeft="@dimen/dp_12"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting_ll_navigation"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_88"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/setting_img_navigation"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_44"
+                    android:src="@mipmap/ic_navi_n_white"/>
+                <TextView
+                    android:id="@+id/setting_tv_navigation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="导航"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#11131A"
+                    android:layout_marginLeft="@dimen/dp_12"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting_ll_broadcasting"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_88"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/setting_img_broadcasting"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_44"
+                    android:src="@mipmap/ic_broadcast_setting_n_white"/>
+                <TextView
+                    android:id="@+id/setting_tv_broadcasting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="播报"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#11131A"
+                    android:layout_marginLeft="@dimen/dp_12"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting_ll_privacy"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_88"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/setting_img_privacy"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_44"
+                    android:src="@mipmap/ic_privacy_n_white"/>
+                <TextView
+                    android:id="@+id/setting_tv_privacy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="隐私"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#11131A"
+                    android:layout_marginLeft="@dimen/dp_12"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/setting_ll_other"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_88"
+                android:background="@color/white"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/setting_img_other"
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_44"
+                    android:src="@mipmap/ic_setting_n_white"/>
+                <TextView
+                    android:id="@+id/setting_tv_other"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="其他"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#11131A"
+                    android:layout_marginLeft="@dimen/dp_12"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/setting_view_vo"
+            android:layout_width="2dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/setting_view"
+            android:layout_toRightOf="@id/setting_ll_tab"
+            android:background="#F5F6FA"/>
+
+        <FrameLayout
+            android:id="@+id/setting_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/setting_view"
+            android:layout_toRightOf="@id/setting_view_vo"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/setting_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/setting_view"
+            android:layout_toRightOf="@id/setting_view_vo"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

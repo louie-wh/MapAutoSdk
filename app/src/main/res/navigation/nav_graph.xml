@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_graph"
+        app:startDestination="@id/mainFragment">
+
+    <fragment
+            android:id="@+id/mainFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.MainFragment"
+            android:label="MyFragment">
+        <action
+                android:id="@+id/action_mainFragment_to_routePlanFragment"
+                app:destination="@id/routePlanFragment"/>
+        <action android:id="@+id/action_mainFragment_to_poiSearchFragment"
+                app:destination="@id/poiSearchFragment"/>
+        <action android:id="@+id/action_mainFragment_to_offlineNavPage"
+                app:destination="@id/offlineNavPage"/>
+        <action android:id="@+id/action_mainFragment_to_personalCenterFragment"
+                app:destination="@id/personalCenterFragment"/>
+        <action android:id="@+id/action_routePlanFragment_to_recommendedRouteFragment"
+            app:destination="@id/recommendedRouteFragment"/>
+        <action android:id="@+id/action_routePlanFragment_to_poiDetailsFragment"
+            app:destination="@id/poiDetailsFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/poiSearchFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.PoiSearchFragment"
+            android:label="PoiSearchFragment"/>
+
+    <fragment android:id="@+id/routePlanFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.RoutePlanFragment"
+            android:label="RoutePlanFragment">
+        <action android:id="@+id/action_routePlanFragment_to_searchInputFragment"
+                app:destination="@id/searchInputFragment"/>
+        <action android:id="@+id/action_routePlanFragment_to_searchResultFragment"
+                app:destination="@id/searchResultFragment"/>
+        <action android:id="@+id/action_routePlanFragment_to_poiDetailsFragment"
+                app:destination="@id/poiDetailsFragment"/>
+        <action android:id="@+id/action_routePlanFragment_to_recommendedRouteFragment"
+                app:destination="@id/recommendedRouteFragment"/>
+        <action android:id="@+id/action_routePlanFragment_to_parkingFragment"
+                app:destination="@id/parkingFragment"/>
+        <action android:id="@+id/action_routePlanFragment_to_favoriteFragment"
+                app:destination="@id/favoriteFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/favoriteFragment"
+        android:name="com.baidu.mapautosdk.ui.fragment.FavoriteFragment"
+        android:label="FavoriteFragment">
+
+        <action android:id="@+id/action_routePlanFragment_to_poiDetailsFragment"
+            app:destination="@id/poiDetailsFragment"/>
+
+        <action android:id="@+id/action_routePlanFragment_to_recommendedRouteFragment"
+            app:destination="@id/recommendedRouteFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/parkingFragment"
+        android:name="com.baidu.mapautosdk.ui.fragment.ParkingFragment"
+        android:label="ParkingFragment">
+
+        <action android:id="@+id/action_routePlanFragment_to_poiDetailsFragment"
+            app:destination="@id/poiDetailsFragment"/>
+
+        <action android:id="@+id/action_routePlanFragment_to_recommendedRouteFragment"
+            app:destination="@id/recommendedRouteFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/demoGuideFragment"
+        android:name="com.baidu.mapautosdk.ui.fragment.DemoGuideFragment"
+            android:label="DemoGuideFragment">
+
+        <action android:id="@+id/action_mainFragment_to_mainFragment"
+            app:destination="@id/mainFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/demoCustomUiFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.DemoCustomUiFragment"
+            android:label="DemoCustomUiFragment"/>
+
+    <fragment android:id="@+id/searchInputFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.SearchInputFragment"
+            android:label="SearchInputFragment"/>
+
+    <fragment android:id="@+id/offlineMapPage"
+            android:name="com.baidu.mapautosdk.ui.fragment.OfflineMapFragment"
+            android:label="OfflineMapFragment">
+
+        <action android:id="@+id/action_MainFragment_to_offlineMapDownloadFragment"
+            app:destination="@id/offlineMapDownloadFragment"/>
+
+        <action android:id="@+id/action_mainFragment_to_offlineNavPage"
+            app:destination="@id/offlineNavPage"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/offlineMapDownloadFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.OfflineMapDownloadFragment"
+            android:label="OfflineMapDownloadFragment">
+
+    </fragment>
+
+    <fragment android:id="@+id/offlineNavPage"
+            android:name="com.baidu.mapautosdk.ui.fragment.OfflineNaviFragment"
+            android:label="OfflineNaviFragment"/>
+
+    <fragment android:id="@+id/searchResultFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.SearchResultFragment"
+            android:label="SearchResultFragment">
+
+        <action android:id="@+id/action_routePlanFragment_to_poiDetailsFragment"
+            app:destination="@id/poiDetailsFragment"/>
+
+        <action android:id="@+id/action_routePlanFragment_to_recommendedRouteFragment"
+            app:destination="@id/recommendedRouteFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/poiDetailsFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.PoiDetailsFragment"
+            android:label="PoiDetailsFragment">
+
+        <action android:id="@+id/action_routePlanFragment_to_recommendedRouteFragment"
+            app:destination="@id/recommendedRouteFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/recommendedRouteFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.RecommendedRouteFragment"
+            android:label="RecommendedRouteFragment">
+
+        <action android:id="@+id/action_routePlanFragment_to_addWaypointFragment"
+            app:destination="@id/addWaypointFragment"/>
+
+        <action android:id="@+id/action_routePlanFragment_to_demoGuideFragment"
+            app:destination="@id/demoGuideFragment"/>
+
+        <action android:id="@+id/action_routePlanFragment_to_routePreferenceFragment"
+            app:destination="@id/routePreferenceFragment"/>
+
+        <action android:id="@+id/action_routePlanFragment_to_simulationNaviFragment"
+            app:destination="@id/simulationNaviFragment"/>
+
+        <action android:id="@+id/action_routePlanFragment_to_demoCustomUiFragment"
+            app:destination="@id/demoCustomUiFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/simulationNaviFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.SimulationNaviFragment"
+            android:label="SimulationNaviFragment">
+
+        <action android:id="@+id/action_routePlanFragment_to_addWaypointFragment"
+            app:destination="@id/addWaypointFragment"/>
+
+        <action android:id="@+id/action_routePlanFragment_to_demoGuideFragment"
+            app:destination="@id/demoGuideFragment"/>
+
+        <action android:id="@+id/action_routePlanFragment_to_demoCustomUiFragment"
+            app:destination="@id/demoCustomUiFragment"/>
+
+    </fragment>
+
+    <fragment android:id="@+id/addWaypointFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.AddWaypointFragment"
+            android:label="AddWaypointFragment"/>
+
+    <fragment android:id="@+id/routePreferenceFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.RoutePreferenceFragment"
+            android:label="RoutePreferenceFragment"/>
+
+    <fragment android:id="@+id/personalCenterFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.PersonalCenterFragment"
+            android:label="PersonalCenterFragment">
+        <action android:id="@+id/action_mainFragment_to_offlineMapPage"
+            app:destination="@id/offlineMapPage"/>
+        <action android:id="@+id/action_mainFragment_to_myCarFragment"
+            app:destination="@id/myCarFragment"/>
+        <action android:id="@+id/action_mainFragment_to_settingFragment"
+            app:destination="@id/settingFragment"/>
+        <action android:id="@+id/action_mainFragment_to_teamUpFragment"
+            app:destination="@id/teamUpFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/myCarFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.MyCarFragment"
+            android:label="MyCarFragment">
+        <action android:id="@+id/action_mainFragment_to_modifyLicensePlateNumberFragment"
+            app:destination="@id/modifyLicensePlateNumberFragment"/>
+    </fragment>
+
+    <fragment android:id="@+id/modifyLicensePlateNumberFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.ModifyLicensePlateNumberFragment"
+            android:label="ModifyLicensePlateNumberFragment">
+
+    </fragment>
+
+    <fragment android:id="@+id/settingFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.SettingFragment"
+            android:label="SettingFragment">
+    </fragment>
+
+    <fragment android:id="@+id/teamUpFragment"
+            android:name="com.baidu.mapautosdk.ui.fragment.TeamUpFragment"
+            android:label="TeamUpFragment">
+    </fragment>
+
+</navigation>

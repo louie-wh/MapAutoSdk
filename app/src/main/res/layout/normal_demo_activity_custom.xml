@@ -1,0 +1,739 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/root_view"
+             android:orientation="vertical"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+    <FrameLayout
+            android:id="@+id/map_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+    </FrameLayout>
+
+    <RelativeLayout
+            android:id="@+id/upper_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        
+        <Button
+            android:id="@+id/button_one"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:text="button1"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_20"
+            android:layout_marginBottom="@dimen/dp_20"/>
+
+        <Button
+            android:id="@+id/button_two"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:text="button2"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_300"
+            android:layout_marginBottom="@dimen/dp_20"/>
+
+        <LinearLayout
+            android:id="@+id/guide_info_layout"
+            android:layout_width="@dimen/dp_608"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginTop="@dimen/dp_24"
+            android:background="@drawable/more_bg"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_148"
+                android:orientation="horizontal"
+                android:background="@drawable/navi_bg">
+
+                <ImageView
+                    android:id="@+id/img_direction_icon"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="@dimen/dp_100"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="@dimen/dp_28" />
+
+                <TextView
+                    android:id="@+id/tv_road_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp_168"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_56" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="米"
+                    android:textSize="@dimen/sp_32"
+                    android:textColor="@color/white"
+                    android:layout_toRightOf="@id/tv_road_distance"
+                    android:layout_marginLeft="@dimen/dp_12"
+                    android:layout_marginTop="@dimen/dp_39"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="进入"
+                    android:textSize="@dimen/sp_32"
+                    android:textColor="#999999"
+                    android:layout_toRightOf="@id/tv_road_distance"
+                    android:layout_marginLeft="@dimen/dp_56"
+                    android:layout_marginTop="@dimen/dp_39"/>
+
+                <TextView
+                    android:id="@+id/tv_road"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/sp_32"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/dp_156"
+                    android:layout_marginTop="@dimen/dp_89"/>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_62"
+                android:orientation="horizontal"
+                android:background="#1A2433"
+                android:gravity="center_vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="随后"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/dp_28"/>
+
+                <ImageView
+                    android:id="@+id/img_direction_icon_small"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
+                    android:layout_marginLeft="@dimen/dp_16"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="进入"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#999999"
+                    android:layout_marginLeft="@dimen/dp_16"/>
+
+                <TextView
+                    android:id="@+id/tv_road_two"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="@color/white"
+                    android:layout_marginLeft="@dimen/dp_16"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_all_distance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/sp_32"
+                    android:textColor="#11131A"
+                    android:layout_marginLeft="@dimen/dp_16"/>
+
+                <TextView
+                    android:id="@+id/tv_takes_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/sp_32"
+                    android:textColor="#11131A"
+                    android:layout_marginLeft="@dimen/dp_16"/>
+
+                <View
+                    android:layout_width="@dimen/dp_1"
+                    android:layout_height="match_parent"
+                    android:background="#DCDDDF"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_14"
+                    android:layout_marginBottom="@dimen/dp_14"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="明天"
+                    android:textSize="@dimen/sp_24"
+                    android:textColor="#3377FF"
+                    android:layout_marginLeft="@dimen/dp_21"
+                    android:visibility="gone"/>
+
+                <TextView
+                    android:id="@+id/tv_arrival_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textSize="@dimen/sp_32"
+                    android:textColor="#11131A"
+                    android:layout_marginLeft="@dimen/dp_8"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/road_condition_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guide_info_layout"
+                android:layout_marginTop="10dp"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:background="@color/nsdk_cl_bg_f">
+
+            <TextView
+                    android:id="@+id/car_progress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <TextView
+                    android:id="@+id/road_conditions"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/enlarge_container"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_300"
+                android:orientation="vertical"
+                android:visibility="gone">
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_30"
+                    android:orientation="horizontal"
+                    android:background="@android:color/background_light">
+
+                <TextView
+                        android:id="@+id/enlarge_info"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/dp_30"/>
+
+                <ImageView
+                        android:id="@+id/enlarge_turn_img"
+                        android:layout_width="@dimen/dp_25"
+                        android:layout_height="@dimen/dp_25"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                    android:id="@+id/enlarge_map"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_0"
+                    android:layout_weight="1">
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/lane_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/guide_info_layout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_5"
+                android:orientation="horizontal"
+                android:background="#4e93fe"
+                android:visibility="gone">
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/enlarge_view"
+            android:layout_width="@dimen/dp_608"
+            android:layout_height="@dimen/dp_490"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+<!--        <com.baidu.baidumap.autosdk.base.widget.AutoRoadConditionView-->
+<!--                android:id="@+id/bnav_rg_cp_roadconditionbar"-->
+<!--                android:layout_width="@dimen/nsdk_rg_road_condition_bar_width"-->
+<!--                android:layout_height="200dp"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginRight="@dimen/nsdk_rg_road_condition_bar_margin_right"-->
+<!--                android:layout_marginBottom="@dimen/nsdk_rg_control_panel_bottom_margin"-->
+<!--                android:layout_alignParentBottom="true"-->
+<!--                android:layout_alignParentRight="true"-->
+<!--                android:visibility="visible"-->
+<!--                android:background="@drawable/nsdk_drawable_roadcondition_fg"/>-->
+
+
+        <Button
+            android:id="@+id/setting_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:onClick="onSettingClick"
+            android:text="设置"
+            android:visibility="gone"/>
+
+        <LinearLayout
+                android:id="@+id/setting_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_above="@+id/setting_btn"
+                android:visibility="gone">
+
+            <Button
+                    android:id="@+id/btn_2d_3d"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2D/3D"
+                    android:textSize="@dimen/sp_10"
+                    android:onClick="on2D3DClick"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/btn_change_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="设置起点图标"
+                        android:textSize="@dimen/sp_10"
+                        android:onClick="onChangeIconClick"/>
+
+                <Button
+                        android:id="@+id/btn_camera_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="蚯蚓信息"
+                        android:textSize="@dimen/sp_10"
+                        android:onClick="onCameraStatusClick"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/btn_night_mode_day"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="白天"
+                        android:textSize="@dimen/sp_10"
+                        android:onClick="onDayNightDayClick"/>
+                <Button
+                        android:id="@+id/btn_night_mode_night"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="黑夜"
+                        android:textSize="@dimen/sp_10"
+                        android:onClick="onDayNightNightClick"/>
+                <Button
+                        android:id="@+id/btn_night_mode_auto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="自动"
+                        android:textSize="@dimen/sp_10"
+                        android:onClick="onDayNightAutoClick"/>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/btn_smart_scale_open"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="智能比例尺-开"
+                        android:textSize="@dimen/sp_10"
+                        android:onClick="onSmartScaleOpenClick"/>
+
+                <Button
+                        android:id="@+id/btn_smart_scale_close"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="智能比例尺-关"
+                        android:textSize="@dimen/sp_10"
+                        android:onClick="onSmartScaleCloseClick"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/btn_new_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="新手"
+                        android:textSize="@dimen/sp_10"
+                        android:onClick="onNewUserClick"/>
+
+                <Button
+                        android:id="@+id/btn_god_user"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="老手"
+                        android:textSize="@dimen/sp_10"
+                        android:onClick="onGodUserClick"/>
+
+                <Button
+                        android:id="@+id/btn_voice_quite"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="静音"
+                        android:textSize="@dimen/sp_10"
+                        android:onClick="onVoiceQuiteClick"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                <Button
+                        android:id="@+id/btn_road_enlarge_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_10"
+                        android:text="路口放大图开关"/>
+
+                <Button
+                        android:id="@+id/btn_car_end_line"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/sp_10"
+                        android:text="车标到终点连线"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_refresh_and_full"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_180"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_204"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:background="@drawable/search_bg">
+
+            <LinearLayout
+                android:id="@+id/ll_refresh_route"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_44"
+                    android:src="@mipmap/ic_refresh_white"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="刷新"
+                    android:textSize="@dimen/sp_22"
+                    android:textColor="#333333"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#DCDDE0"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"/>
+
+            <LinearLayout
+                android:id="@+id/ll_full_view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_0"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_44"
+                    android:layout_height="@dimen/dp_44"
+                    android:src="@mipmap/ic_overview_white"/>
+
+                <TextView
+                    android:id="@+id/tv_full"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全览"
+                    android:textSize="@dimen/sp_22"
+                    android:textColor="#333333"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_exit"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:background="@drawable/search_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:src="@mipmap/ic_exit_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="退出"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_22" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_setting"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_142"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:background="@drawable/search_bg"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:src="@mipmap/ic_setting_n_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="设置"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_22" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_recover_navi"
+            android:layout_width="@dimen/dp_428"
+            android:layout_height="@dimen/dp_122"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:layout_toRightOf="@id/ll_setting"
+            android:background="@mipmap/btn_white"
+            android:gravity="center"
+            android:text="继续导航"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_32" />
+
+        <LinearLayout
+            android:id="@+id/ll_viaduct_msg"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/tv_recover_navi"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:background="@drawable/search_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_viaduct_msg"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"/>
+
+            <TextView
+                android:id="@+id/tv_viaduct_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_22" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_roads_msg"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/ll_viaduct_msg"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:layout_marginBottom="@dimen/dp_24"
+            android:background="@drawable/search_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/img_roads_msg"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"/>
+
+            <TextView
+                android:id="@+id/tv_roads_msg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_22" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_route_condition"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:background="@drawable/search_bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_24"
+            android:layout_marginRight="@dimen/dp_40"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_route_condition"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:src="@mipmap/ic_traffic_n_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="路况"
+                android:textColor="#333333"
+                android:textSize="@dimen/sp_22" />
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/test_button_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true"
+            android:visibility="gone">
+
+            <TextView
+                    android:id="@+id/speed_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"/>
+
+            <Button
+                    android:id="@+id/btn_zoom_in"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="放大底图"
+                    android:textSize="10sp"
+                    android:onClick="onZoomInClick"
+                android:visibility="gone"/>
+
+            <Button
+                    android:id="@+id/btn_zoom_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="缩小底图"
+                    android:textSize="10sp"
+                    android:onClick="onZoomOutClick"
+                android:visibility="gone"/>
+
+            <Button
+                    android:id="@+id/btn_full_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全览"
+                    android:textSize="10sp"
+                    android:onClick="onFullViewClick"/>
+
+            <Button
+                    android:id="@+id/btn_recover_navi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="恢复导航"
+                    android:textSize="10sp"
+                    android:onClick="onRecoverNaviClick"/>
+
+            <Button
+                    android:id="@+id/btn_refresh_route"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="刷新路线"
+                    android:textSize="10sp"
+                    android:onClick="onRefreshRouteClick"/>
+
+            <Button
+                    android:id="@+id/btn_route_condition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="路况开/关"
+                    android:textSize="10sp"
+                    android:onClick="onRoadConditionClick"/>
+
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                <Button
+                        android:id="@+id/main_side_road_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10sp"
+                        android:text="在主路"
+                        android:onClick="onMainSideClick"
+                        android:visibility="gone"/>
+
+                <Button
+                        android:id="@+id/on_under_bridge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="在桥上"
+                        android:textSize="10sp"
+                        android:onClick="onBridgeClick"
+                        android:visibility="gone"/>
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

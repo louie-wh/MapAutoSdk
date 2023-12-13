@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.NotDownloadedFragment">
+
+    <RelativeLayout
+        android:id="@+id/not_downloaded_rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_64"
+        android:background="@drawable/more_popup_broadcast_bg"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40">
+
+        <ImageView
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:src="@mipmap/ic_search_white"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/dp_110"/>
+
+        <EditText
+            android:id="@+id/not_downloaded_et"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/more_popup_broadcast_bg"
+            android:layout_marginLeft="@dimen/dp_166"
+            android:layout_marginRight="@dimen/dp_111"
+            android:hint="请输入省份或城市名称进行搜索"
+            android:textColorHint="#505773"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/not_downloaded_ll"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_below="@id/not_downloaded_rl_search"
+        android:layout_marginTop="@dimen/dp_12"
+        android:background="@drawable/more_popup_broadcast_bg">
+
+        <TextView
+            android:id="@+id/not_downloaded_tv_domestic"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="国内（含港澳台）"
+            android:textSize="@dimen/sp_28"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:background="@drawable/not_downloaded_city_bg"/>
+
+        <TextView
+            android:id="@+id/not_downloaded_tv_international"
+            android:layout_width="@dimen/dp_0"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="国际"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:gravity="center"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/not_downloaded_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/not_downloaded_ll"
+        android:layout_marginTop="@dimen/dp_20"/>
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/not_downloaded_vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/not_downloaded_ll"
+        android:layout_marginTop="@dimen/dp_20"/>
+
+</RelativeLayout>

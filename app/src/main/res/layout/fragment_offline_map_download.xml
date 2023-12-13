@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.OfflineMapDownloadFragment">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_762"
+        android:layout_height="match_parent"
+        android:background="@drawable/more_bg"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_24">
+
+        <ImageView
+            android:id="@+id/offline_map_download_img_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginTop="@dimen/dp_34"
+            android:layout_marginLeft="@dimen/dp_12"
+            android:src="@mipmap/ic_back_white" />
+
+        <LinearLayout
+            android:id="@+id/offline_map_download_ll"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55"
+            android:layout_marginTop="@dimen/dp_36"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:layout_marginRight="@dimen/dp_60"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/offline_map_download_ll_no"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/offline_map_download_tv_no"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="未下载"
+                    android:textSize="@dimen/sp_32"
+                    android:textColor="#11131A"/>
+
+                <View
+                    android:id="@+id/offline_map_download_view_no"
+                    android:layout_width="@dimen/dp_61"
+                    android:layout_height="@dimen/dp_8"
+                    android:background="@drawable/download_select_bg"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/offline_map_download_ll_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/dp_70">
+
+                <TextView
+                    android:id="@+id/offline_map_download_tv_yes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已下载"
+                    android:textSize="@dimen/sp_32"
+                    android:textColor="#505773"/>
+
+                <View
+                    android:id="@+id/offline_map_download_view_yes"
+                    android:layout_width="@dimen/dp_61"
+                    android:layout_height="@dimen/dp_8"
+                    android:background="@drawable/download_select_bg"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/offline_map_download_fl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/offline_map_download_ll"
+            android:layout_marginTop="@dimen/dp_24"/>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/offline_map_download_vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/offline_map_download_ll"
+            android:layout_marginTop="@dimen/dp_24"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

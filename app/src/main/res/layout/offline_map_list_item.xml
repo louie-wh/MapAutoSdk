@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/offline_map_item_tv_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="全国基础包"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_centerVertical="true"/>
+
+        <TextView
+            android:id="@+id/offline_map_item_tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(正在下载)"
+            android:textSize="@dimen/sp_22"
+            android:textColor="#3366FF"
+            android:layout_toRightOf="@id/offline_map_item_tv_city"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/offline_map_item_tv_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="213.8M"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_210"
+            android:layout_centerVertical="true"/>
+
+        <ProgressBar
+            android:id="@+id/offline_map_item_pb"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_56"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:max="100"
+            android:progress="100"
+            android:progressDrawable="@drawable/more_progressbar_bg"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_56"/>
+
+        <RelativeLayout
+            android:id="@+id/offline_map_item_rl_download"
+            android:layout_width="@dimen/dp_140"
+            android:layout_height="@dimen/dp_56"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_56">
+
+            <ImageView
+                android:id="@+id/offline_map_item_img_download"
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:src="@mipmap/ic_download" />
+
+            <TextView
+                android:id="@+id/offline_map_item_tv_download"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_60"
+                android:text="下载"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_28" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/offline_map_item_tv_download_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="（已下载）"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#505773"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_48"
+            android:layout_centerVertical="true"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#E9EAF0"
+        android:layout_marginTop="@dimen/dp_32"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_32"/>
+
+</LinearLayout>
+

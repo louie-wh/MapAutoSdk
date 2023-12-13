@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_762"
+        android:layout_height="match_parent"
+        android:background="@drawable/more_bg"
+        android:layout_marginLeft="@dimen/dp_40">
+
+        <ImageView
+            android:id="@+id/navigation_popup_img_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:src="@mipmap/ic_back_white"
+            android:layout_marginTop="@dimen/dp_34"
+            android:layout_marginLeft="@dimen/dp_12"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_674"
+            android:layout_height="@dimen/dp_72"
+            android:layout_toRightOf="@id/navigation_popup_img_back"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:background="@drawable/navigation_et_bg">
+
+            <EditText
+                android:id="@+id/navigation_popup_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_131"
+                android:background="@drawable/navigation_et_bg"
+                android:hint="输入目的地"
+                android:paddingLeft="@dimen/dp_16"
+                android:textColor="#505773"
+                android:textSize="@dimen/sp_28"
+                android:imeOptions="flagNoExtractUi"/>
+
+            <View
+                android:id="@+id/navigation_popup_view"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:background="#DADADA"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_90"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#3366FF"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/img_favorite"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:src="@mipmap/ic_favorite_points"
+            android:layout_marginTop="@dimen/dp_104"
+            android:layout_marginLeft="@dimen/dp_37"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_96"
+            android:layout_height="wrap_content"
+            android:text="收藏点"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#11131A"
+            android:layout_below="@id/img_favorite"
+            android:layout_marginLeft="@dimen/dp_33"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/img_paking"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:src="@mipmap/icon_paking"
+            android:layout_marginTop="@dimen/dp_104"
+            android:layout_marginLeft="@dimen/dp_157"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_96"
+            android:layout_height="wrap_content"
+            android:text="停车场"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#11131A"
+            android:layout_below="@id/img_paking"
+            android:layout_marginLeft="@dimen/dp_153"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/img_gas"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:src="@mipmap/icon_gas_station"
+            android:layout_marginTop="@dimen/dp_104"
+            android:layout_marginLeft="@dimen/dp_277"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_96"
+            android:layout_height="wrap_content"
+            android:text="加油站"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#11131A"
+            android:layout_below="@id/img_gas"
+            android:layout_marginLeft="@dimen/dp_273"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/img_lixiang"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:src="@mipmap/ic_lixiang_white"
+            android:layout_marginTop="@dimen/dp_104"
+            android:layout_marginLeft="@dimen/dp_397"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_96"
+            android:layout_height="wrap_content"
+            android:text="理想汽车"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#11131A"
+            android:layout_below="@id/img_gas"
+            android:layout_marginLeft="@dimen/dp_393"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/img_washcar"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:src="@mipmap/icon_washcar"
+            android:layout_marginTop="@dimen/dp_104"
+            android:layout_marginLeft="@dimen/dp_517"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_96"
+            android:layout_height="wrap_content"
+            android:text="洗车"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#11131A"
+            android:layout_below="@id/img_washcar"
+            android:layout_marginLeft="@dimen/dp_513"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/navigation_popup_img_more"
+            android:layout_width="@dimen/dp_88"
+            android:layout_height="@dimen/dp_88"
+            android:src="@mipmap/icon_more"
+            android:layout_marginTop="@dimen/dp_104"
+            android:layout_marginLeft="@dimen/dp_637"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_96"
+            android:layout_height="wrap_content"
+            android:text="更多"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#11131A"
+            android:layout_below="@id/navigation_popup_img_more"
+            android:layout_marginLeft="@dimen/dp_633"
+            android:gravity="center"/>
+
+        <View
+            android:id="@+id/navigation_popup_view_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_12"
+            android:background="#F5F7FA"
+            android:layout_marginTop="@dimen/dp_240"/>
+
+        <ListView
+            android:id="@+id/navigation_popup_listview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@color/black"
+            android:layout_below="@id/navigation_popup_view_bottom"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

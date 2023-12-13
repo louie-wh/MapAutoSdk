@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/item_search_result_rl_go_poi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/item_search_result_img_go_here"
+        android:layout_marginRight="@dimen/dp_67">
+
+        <RelativeLayout
+            android:id="@+id/rl_sign"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="@dimen/dp_38"
+            android:layout_marginTop="@dimen/dp_28"
+            android:layout_marginLeft="@dimen/dp_46">
+
+            <ImageView
+                android:id="@+id/img_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/sign_selcted_white"/>
+
+            <TextView
+                android:id="@+id/tv_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1"
+                android:textSize="@dimen/sp_24"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_search_result_list_tv_name"
+            android:layout_width="@dimen/dp_508"
+            android:layout_height="wrap_content"
+            android:text="天安门"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_marginTop="@dimen/dp_27"
+            android:layout_toRightOf="@id/rl_sign"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <TextView
+            android:id="@+id/item_search_result_list_tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_search_result_list_tv_name"
+            android:layout_marginLeft="@dimen/dp_88"
+            android:layout_marginTop="@dimen/dp_16"
+            android:text="4.8km"
+            android:textColor="#505773"
+            android:textSize="@dimen/sp_24" />
+
+        <View
+            android:id="@+id/distance_view"
+            android:layout_width="1dp"
+            android:layout_height="@dimen/dp_26"
+            android:background="#505773"
+            android:layout_toRightOf="@id/item_search_result_list_tv_distance"
+            android:layout_below="@id/item_search_result_list_tv_name"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_14"/>
+
+        <TextView
+            android:id="@+id/item_search_result_list_tv_addrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/item_search_result_list_tv_name"
+            android:layout_marginLeft="@dimen/dp_14"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_toRightOf="@id/distance_view"
+            android:text="5A景区东城区-清华西路28号"
+            android:textColor="#505773"
+            android:textSize="@dimen/sp_24"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/item_search_result_img_go_here"
+        android:layout_width="@dimen/dp_52"
+        android:layout_height="@dimen/dp_52"
+        android:src="@mipmap/ic_go_here"
+        android:layout_marginTop="@dimen/dp_37"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_47"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="到这去"
+        android:textSize="@dimen/sp_22"
+        android:textColor="#5C6473"
+        android:layout_marginTop="@dimen/dp_99"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_16"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#EBE9E0"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginRight="@dimen/dp_40"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

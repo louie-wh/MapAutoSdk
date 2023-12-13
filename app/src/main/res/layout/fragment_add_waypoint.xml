@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.AddWaypointFragment">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_608"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:background="@drawable/more_bg">
+
+        <ImageView
+            android:id="@+id/add_waypoint_img_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:src="@mipmap/ic_back_white"
+            android:layout_marginTop="@dimen/dp_34"
+            android:layout_marginLeft="@dimen/dp_12"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="@dimen/dp_512"
+            android:layout_height="@dimen/dp_72"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_toRightOf="@id/add_waypoint_img_back"
+            android:background="@drawable/navigation_et_bg">
+
+            <ImageView
+                android:id="@+id/add_waypoint_img_search"
+                android:layout_width="@dimen/dp_40"
+                android:layout_height="@dimen/dp_40"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/dp_14"
+                android:src="@mipmap/ic_search_white" />
+
+            <EditText
+                android:id="@+id/add_waypoint_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/navigation_et_bg"
+                android:hint="添加途经点"
+                android:layout_marginLeft="@dimen/dp_10"
+                android:layout_toRightOf="@id/add_waypoint_img_search"
+                android:textColor="#878D99"
+                android:textSize="@dimen/sp_28"
+                android:imeOptions="flagNoExtractUi"/>
+
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/add_waypoint_img_gas"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:src="@mipmap/ic_gas_station"
+            android:layout_marginTop="@dimen/dp_116"
+            android:layout_marginLeft="@dimen/dp_71"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_112"
+            android:layout_height="wrap_content"
+            android:text="加油站"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_below="@id/add_waypoint_img_gas"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/add_waypoint_img_charging"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:src="@mipmap/ic_charging_station"
+            android:layout_marginTop="@dimen/dp_116"
+            android:layout_marginLeft="@dimen/dp_259"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_112"
+            android:layout_height="wrap_content"
+            android:text="充电站"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_below="@id/add_waypoint_img_charging"
+            android:layout_marginLeft="@dimen/dp_248"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/add_waypoint_img_toilet"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:src="@mipmap/ic_toilet"
+            android:layout_marginTop="@dimen/dp_116"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_71"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="厕所"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_below="@id/add_waypoint_img_toilet"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_88"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/add_waypoint_img_point"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:src="@mipmap/ic_point_selection"
+            android:layout_marginTop="@dimen/dp_274"
+            android:layout_marginLeft="@dimen/dp_71"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_112"
+            android:layout_height="wrap_content"
+            android:text="地图选点"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_below="@id/add_waypoint_img_point"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/add_waypoint_img_service_area"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:layout_marginLeft="@dimen/dp_259"
+            android:layout_marginTop="@dimen/dp_274"
+            android:src="@mipmap/ic_service_area" />
+
+        <TextView
+            android:layout_width="@dimen/dp_112"
+            android:layout_height="wrap_content"
+            android:text="服务区"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_below="@id/add_waypoint_img_service_area"
+            android:layout_marginLeft="@dimen/dp_248"
+            android:gravity="center"/>
+
+        <ImageView
+            android:id="@+id/add_waypoint_img_food"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:src="@mipmap/ic_food"
+            android:layout_marginTop="@dimen/dp_274"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_71"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_112"
+            android:layout_height="wrap_content"
+            android:text="餐饮美食"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_below="@id/add_waypoint_img_food"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/dp_60"/>
+
+        <ImageView
+            android:id="@+id/add_waypoint_img_hotel"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:src="@mipmap/ic_hotel"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_71"
+            android:layout_marginBottom="@dimen/dp_150"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_112"
+            android:layout_height="wrap_content"
+            android:text="酒店住宿"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_60"
+            android:layout_marginBottom="@dimen/dp_122"/>
+
+        <ImageView
+            android:id="@+id/add_waypoint_img_serving"
+            android:layout_width="@dimen/dp_90"
+            android:layout_height="@dimen/dp_90"
+            android:src="@mipmap/ic_serving_station"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_150"
+            android:layout_marginLeft="@dimen/dp_259"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_112"
+            android:layout_height="wrap_content"
+            android:text="维修站"
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_122"
+            android:layout_marginLeft="@dimen/dp_248"
+            android:gravity="center"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#B3000000">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_762"
+        android:layout_height="match_parent"
+        android:background="@drawable/more_bg"
+        android:layout_marginLeft="@dimen/dp_36"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24">
+
+        <ImageView
+            android:id="@+id/personal_center_popup_img_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_34"
+            android:src="@mipmap/ic_back_white" />
+
+        <TextView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_75"
+            android:text="“"
+            android:textSize="@dimen/sp_60"
+            android:textColor="#386AFF"
+            android:layout_marginTop="@dimen/dp_94"
+            android:layout_marginLeft="@dimen/dp_108"
+            android:gravity="right"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="早上好，路上注意安全哦~"
+            android:textSize="@dimen/sp_36"
+            android:textColor="#11131A"
+            android:layout_marginTop="@dimen/dp_98"
+            android:layout_marginLeft="@dimen/dp_180"/>
+
+        <TextView
+            android:layout_width="@dimen/dp_60"
+            android:layout_height="@dimen/dp_75"
+            android:text="”"
+            android:textSize="@dimen/sp_60"
+            android:textColor="#386AFF"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_136"
+            android:layout_marginRight="@dimen/dp_108"
+            android:gravity="left"/>
+
+        <TextView
+            android:id="@+id/personal_center_popup_tv_car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_190"
+            android:background="@mipmap/ic_rectangle_personal"
+            android:paddingLeft="@dimen/dp_59"
+            android:paddingTop="@dimen/dp_26"
+            android:paddingRight="@dimen/dp_59"
+            android:paddingBottom="@dimen/dp_35"
+            android:text="添加爱车 为您避开限行"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_28" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_8"
+            android:background="#F5F6FA"
+            android:layout_marginTop="@dimen/dp_302"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_260"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dp_62">
+
+            <LinearLayout
+                android:id="@+id/personal_center_popup_ll_setting"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/personal_setting_bg"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_98"
+                    android:layout_height="@dimen/dp_98"
+                    android:src="@mipmap/ic_setting"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="设置"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#11131A"
+                    android:layout_marginTop="@dimen/dp_8"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/personal_center_popup_ll_map"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/personal_setting_bg"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_98"
+                    android:layout_height="@dimen/dp_98"
+                    android:src="@mipmap/ic_map"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="离线地图"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#11131A"
+                    android:layout_marginTop="@dimen/dp_8"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/personal_center_popup_ll_team"
+                android:layout_width="@dimen/dp_0"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@drawable/personal_setting_bg"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="@dimen/dp_98"
+                    android:layout_height="@dimen/dp_98"
+                    android:src="@mipmap/ic_map"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="组队出行"
+                    android:textSize="@dimen/sp_28"
+                    android:textColor="#11131A"
+                    android:layout_marginTop="@dimen/dp_8"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

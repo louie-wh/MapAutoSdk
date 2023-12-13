@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/route_nearby_rl_all">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/search_bg">
+
+        <RelativeLayout
+            android:id="@+id/left_content"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_90"
+            android:gravity="center_vertical"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/poi_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_20"
+                android:layout_marginRight="@dimen/dp_20"
+                android:text="地铁"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#11131A"
+                android:layout_centerVertical="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/right_content"
+            android:layout_width="@dimen/dp_130"
+            android:layout_height="@dimen/dp_90"
+            android:layout_toRightOf="@id/left_content"
+            android:gravity="center"
+            android:background="#FF4D4D"
+            android:layout_marginLeft="@dimen/dp_10">
+
+            <ImageView
+                android:id="@+id/delete_waypoint_img"
+                android:layout_width="@dimen/dp_35"
+                android:layout_height="@dimen/dp_35"
+                android:layout_marginTop="@dimen/dp_18"
+                android:scaleType="fitCenter"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/ic_waypoint_delete_white"/>
+
+            <TextView
+                android:id="@+id/set_waypoint_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/delete_waypoint_img"
+                android:text="删除"
+                android:textSize="@dimen/sp_20"
+                android:textColor="@color/white"/>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/pin_placeholder"
+        android:layout_width="@dimen/dp_44"
+        android:layout_height="@dimen/dp_44"
+        android:src="@mipmap/ic_inverted_trigonometry"
+        android:layout_marginTop="@dimen/dp_78"
+        android:layout_centerHorizontal="true"/>
+</RelativeLayout>

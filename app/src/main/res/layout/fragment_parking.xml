@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.SearchResultFragment">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_762"
+        android:layout_height="match_parent"
+        android:background="@drawable/more_bg"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/parking_img_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:src="@mipmap/ic_back_white"
+            android:layout_marginTop="@dimen/dp_34"
+            android:layout_marginLeft="@dimen/dp_12"/>
+
+        <RelativeLayout
+            android:layout_width="@dimen/dp_674"
+            android:layout_height="@dimen/dp_72"
+            android:layout_toRightOf="@id/parking_img_back"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:background="@drawable/navigation_et_bg">
+
+            <TextView
+                android:id="@+id/parking_et"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginRight="@dimen/dp_131"
+                android:background="@drawable/navigation_et_bg"
+                android:paddingLeft="@dimen/dp_16"
+                android:text="111"
+                android:textColor="#11131A"
+                android:textSize="@dimen/sp_28"
+                android:gravity="center_vertical"/>
+
+            <View
+                android:id="@+id/parking_view"
+                android:layout_width="@dimen/dp_1"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_12"
+                android:layout_marginRight="@dimen/dp_90"
+                android:layout_marginBottom="@dimen/dp_12"
+                android:background="#DADADA"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/parking_tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="搜索"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#3366FF"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/dp_16"
+                android:layout_centerVertical="true"
+                android:visibility="gone"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_92"
+            android:visibility="visible"
+            android:background="@color/white">
+
+            <ListView
+                android:id="@+id/parking_listview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                android:overScrollMode="never"
+                android:divider="@null"
+                android:paddingBottom="@dimen/dp_14"
+                android:listSelector="@drawable/transparent"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_65"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="@drawable/route_plan_search_lv_bg"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

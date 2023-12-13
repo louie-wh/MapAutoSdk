@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.FavoriteFragment">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_762"
+        android:layout_height="match_parent"
+        android:background="@drawable/more_bg"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_24">
+
+        <ImageView
+            android:id="@+id/favorite_img_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:src="@mipmap/ic_back_white"
+            android:layout_marginTop="@dimen/dp_36"
+            android:layout_marginLeft="@dimen/dp_12"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏点"
+            android:textSize="@dimen/sp_32"
+            android:textColor="#11131A"
+            android:layout_marginTop="@dimen/dp_38"
+            android:layout_centerHorizontal="true"/>
+
+        <ImageView
+            android:id="@+id/favorite_img_refresh"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="@dimen/dp_36"
+            android:layout_marginRight="@dimen/dp_20"
+            android:src="@mipmap/ic_refresh_white" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_92"
+            android:visibility="visible"
+            android:background="@color/white">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/favorite_rlv"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_65"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/dp_24"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"
+                android:background="@drawable/route_plan_search_lv_bg"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/favorite_rl_not_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/favorite_img_back">
+
+            <ImageView
+                android:id="@+id/favorite_img_not_data"
+                android:layout_width="@dimen/dp_326"
+                android:layout_height="@dimen/dp_290"
+                android:src="@mipmap/ic_not_data_day"
+                android:layout_marginTop="@dimen/dp_66"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="暂无收藏点，"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#505773"
+                android:layout_below="@id/favorite_img_not_data"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginLeft="@dimen/dp_241"/>
+
+            <TextView
+                android:id="@+id/favorite_tv_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="点击添加"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#3366FF"
+                android:layout_below="@id/favorite_img_not_data"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginRight="@dimen/dp_241"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="收藏记录支持：记录目的地信息：一键导航目的地"
+                android:textSize="@dimen/sp_24"
+                android:textColor="#505773"
+                android:layout_below="@id/favorite_img_not_data"
+                android:layout_marginTop="@dimen/dp_62"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

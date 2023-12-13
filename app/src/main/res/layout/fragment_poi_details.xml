@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.PoiDetailsFragment">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_608"
+        android:layout_height="match_parent"
+        android:background="@drawable/more_bg"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginBottom="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:visibility="visible">
+
+        <ImageView
+            android:id="@+id/poi_details_img_back"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:src="@mipmap/ic_back_white"
+            android:layout_marginTop="@dimen/dp_34"
+            android:layout_marginLeft="@dimen/dp_12"/>
+
+        <TextView
+            android:id="@+id/poi_details_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/sp_36"
+            android:textColor="#11131A"
+            android:layout_below="@id/poi_details_img_back"
+            android:layout_marginTop="@dimen/dp_24"
+            android:layout_marginLeft="@dimen/dp_48"/>
+
+        <TextView
+            android:id="@+id/poi_details_tv_addrs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textSize="@dimen/sp_28"
+            android:textColor="#11131A"
+            android:layout_below="@id/poi_details_tv_name"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginRight="@dimen/dp_40"/>
+
+        <TextView
+            android:id="@+id/poi_details_tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="17.8"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#11131A"
+            android:layout_below="@id/poi_details_tv_addrs"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/poi_details_tv_gl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="公里"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#505773"
+            android:layout_below="@id/poi_details_tv_addrs"
+            android:layout_toEndOf="@id/poi_details_tv_distance"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/poi_details_tv_yue"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="wrap_content"
+            android:text="约"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#505773"
+            android:layout_below="@id/poi_details_tv_addrs"
+            android:layout_toRightOf="@id/poi_details_tv_gl"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_18"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/poi_details_tv_time"
+            android:layout_width="@dimen/dp_32"
+            android:layout_height="wrap_content"
+            android:text="50"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#11131A"
+            android:layout_below="@id/poi_details_tv_addrs"
+            android:layout_toRightOf="@id/poi_details_tv_yue"
+            android:layout_marginTop="@dimen/dp_20"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分钟"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#505773 "
+            android:layout_below="@id/poi_details_tv_addrs"
+            android:layout_toRightOf="@id/poi_details_tv_time"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginLeft="@dimen/dp_8"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/poi_details_img_collection"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:src="@mipmap/ic_collection_n"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_42"
+            android:layout_marginBottom="@dimen/dp_56"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收藏"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#11131A"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_24"/>
+
+        <ImageView
+            android:id="@+id/poi_details_img_near"
+            android:layout_width="@dimen/dp_44"
+            android:layout_height="@dimen/dp_44"
+            android:src="@mipmap/ic_near_white"
+            android:layout_alignParentBottom="true"
+            android:layout_toRightOf="@id/poi_details_img_collection"
+            android:layout_marginLeft="@dimen/dp_40"
+            android:layout_marginBottom="@dimen/dp_56"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="周边"
+            android:textSize="@dimen/sp_24"
+            android:textColor="#11131A"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/dp_124"
+            android:layout_marginBottom="@dimen/dp_24"/>
+
+        <LinearLayout
+            android:id="@+id/poi_details_ll_go_here"
+            android:layout_width="@dimen/dp_370"
+            android:layout_height="@dimen/dp_116"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/dp_30"
+            android:background="@mipmap/ic_rectangle"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/dp_44"
+                android:layout_height="@dimen/dp_44"
+                android:src="@mipmap/ic_go" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:text="到这去"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_28" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

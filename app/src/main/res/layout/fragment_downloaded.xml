@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.FavoriteFragment">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_762"
+        android:layout_height="match_parent"
+        android:background="@drawable/more_bg"
+        android:layout_marginTop="@dimen/dp_24"
+        android:layout_marginLeft="@dimen/dp_40"
+        android:layout_marginBottom="@dimen/dp_24">
+
+        <RelativeLayout
+            android:id="@+id/downloaded_rl_not_data"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/downloaded_img_not_data"
+                android:layout_width="@dimen/dp_326"
+                android:layout_height="@dimen/dp_290"
+                android:src="@mipmap/ic_not_download"
+                android:layout_centerHorizontal="true"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_1"
+                android:background="#E9EAF0"
+                android:layout_marginTop="@dimen/dp_268"
+                android:layout_marginLeft="@dimen/dp_40"
+                android:layout_marginRight="@dimen/dp_40"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="无下载任务"
+                android:textSize="@dimen/sp_28"
+                android:textColor="#505773"
+                android:layout_below="@id/downloaded_img_not_data"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="下载离线地图，没网也能搜地点，看地图"
+                android:textSize="@dimen/sp_24"
+                android:textColor="#505773"
+                android:layout_below="@id/downloaded_img_not_data"
+                android:layout_marginTop="@dimen/dp_62"
+                android:layout_centerHorizontal="true"/>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

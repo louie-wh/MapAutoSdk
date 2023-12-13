@@ -1,0 +1,18 @@
+Global:
+  version: 2.0
+
+Default:
+  profile: [master]
+
+Profiles:
+  - profile:
+    name: master
+    mode: AGENT
+    environment:
+      cluster: UBUNTU
+    build:
+      command:
+      cache:
+        enable: false             # true 启用缓存，false 禁用缓存
+    artifacts:
+      release: true
